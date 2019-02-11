@@ -10,6 +10,10 @@ public class Todo {
 
     public Todo() {}
 
+    public Todo(String name, boolean isCompleted) {
+        this(null, name, isCompleted);
+    }
+
     public Todo(Long id, String name, boolean isCompleted) {
         this.id = id;
         this.name = name;
