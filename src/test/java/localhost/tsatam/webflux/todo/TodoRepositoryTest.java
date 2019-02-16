@@ -1,6 +1,7 @@
-package localhost.tsatam.webflux.repository;
+package localhost.tsatam.webflux.todo;
 
-import localhost.tsatam.webflux.entity.Todo;
+import localhost.tsatam.webflux.todo.Todo;
+import localhost.tsatam.webflux.todo.TodoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

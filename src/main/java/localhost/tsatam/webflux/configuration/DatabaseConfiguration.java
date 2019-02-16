@@ -16,7 +16,7 @@ public class DatabaseConfiguration {
     @PostConstruct
     public void setUpTables() {
         client.execute()
-            .sql("CREATE TABLE todo" +
+            .sql("CREATE TABLE IF NOT EXISTS todo" +
                 "(id IDENTITY PRIMARY KEY," +
                 "name VARCHAR(255)," +
                 "is_completed BOOLEAN)")

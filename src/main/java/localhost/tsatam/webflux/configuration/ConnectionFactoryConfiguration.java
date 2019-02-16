@@ -13,7 +13,7 @@ public class ConnectionFactoryConfiguration extends AbstractR2dbcConfiguration {
     @Bean
     public ConnectionFactory connectionFactory() {
         return new H2ConnectionFactory(H2ConnectionConfiguration.builder()
-            .url("mem:test;DB_CLOSE_DELAY=10")
+            .url("mem:test;DB_CLOSE_DELAY=-1")
             .build());
     }
 }

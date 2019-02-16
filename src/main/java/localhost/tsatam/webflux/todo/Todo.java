@@ -1,6 +1,8 @@
-package localhost.tsatam.webflux.entity;
+package localhost.tsatam.webflux.todo;
 
 import org.springframework.data.annotation.Id;
+
+import java.util.Objects;
 
 public class Todo {
     @Id
@@ -31,4 +33,19 @@ public class Todo {
     public boolean isCompleted() { return isCompleted; }
 
     public void setCompleted(boolean completed) { isCompleted = completed; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Todo todo = (Todo) o;
+        return isCompleted == todo.isCompleted &&
+            Objects.equals(id, todo.id) &&
+            Objects.equals(name, todo.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, isCompleted);
+    }
 }
